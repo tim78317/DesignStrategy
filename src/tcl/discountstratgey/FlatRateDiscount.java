@@ -1,4 +1,3 @@
-
 package tcl.discountstratgey;
 
 /**

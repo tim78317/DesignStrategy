@@ -7,6 +7,11 @@ package tcl.discountstratgey;
  */
 public class Customer {
     private String customerid;
+    
+    
+    
+    public Customer(String cusid, String name){
+    }
 
     public String getCustomerid() {
         return customerid;
