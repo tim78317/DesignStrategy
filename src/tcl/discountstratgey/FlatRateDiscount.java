@@ -5,21 +5,20 @@ package tcl.discountstratgey;
  * @author tim78317
  */
 public class FlatRateDiscount implements DiscountStrategy {
-    private double discountrate =.10;
+    private double discountRate = .10;
 
+    public FlatRateDiscount(double discountRate) {
+        this.discountRate = discountRate;
+    }
     
-    
-   
-   
-
     @Override
-    public double getDiscount(double price, int qty) {
-        return price * qty * discountrate;
+    public double getDiscountAmt(double price, int qty) {
+        return price * qty * discountRate;
     }
 
     @Override
     public double getDiscountRate() {
-        return discountrate;
+        return discountRate;
     }
 
     @Override
@@ -29,8 +28,8 @@ public class FlatRateDiscount implements DiscountStrategy {
   
     public static void main(String[] args) {
         
-        DiscountStrategy discount= new FlatRateDiscount();
-        double amt = discount.getDiscount(8, 2);
+        DiscountStrategy discount= new FlatRateDiscount(.10);
+        double amt = discount.getDiscountAmt(8, 2);
         
         System.out.println(amt);
     }

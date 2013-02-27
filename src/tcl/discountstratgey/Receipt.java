@@ -6,21 +6,31 @@ package tcl.discountstratgey;
  * @author tim78317
  */
 public class Receipt {
-    private LineItem[] lineitem;
+    private LineItem[] lineItems;
     private Customer customer;
     
     
-    
-    
-    
-    
-
-    public LineItem[] getLineitem() {
-        return lineitem;
+    public void addLineItem(Product product, int qty) {
+        //LineItem item = new LineItem(product, qty);
+        //addToArray(item);
+    }
+ private void addToArray(LineItem item) {
+        LineItem[] tempItems = new LineItem[lineItems.length + 1];
+        System.arraycopy(lineItems, 0, tempItems, 0, lineItems.length);
+        tempItems[lineItems.length] = item;
+        lineItems = tempItems;
+    }
+ 
+  public double getTotalBeforeDiscount() {
+        double grandTotal = 0.0;
+        for(LineItem item : lineItems) {
+            grandTotal += item.getSubTotal();
+        }
+        return grandTotal;
     }
 
-    public void setLineitem(LineItem[] lineitem) {
-        this.lineitem = lineitem;
+    public void setLineitem(LineItem[] lineItems) {
+        this.lineItems = lineItems;
     }
 
     public Customer getCustomer() {

@@ -7,7 +7,7 @@ package tcl.discountstratgey;
  */
 public interface DiscountStrategy {
 
-   public abstract double getDiscount(double price, int qty);
+   public abstract double getDiscountAmt(double price, int qty);
 
     public abstract double getDiscountRate();
 
