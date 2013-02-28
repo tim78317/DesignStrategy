@@ -8,12 +8,15 @@ public class LineItem {
 
     private int qty;
     private Product product;
-
+   
     public LineItem(String prodId, int qty) {
         this.qty = qty;
         // find product
         FakeDatabase db = new FakeDatabase();
         product = db.findProduct(prodId);
+    
+    
+    
     }
 
    
@@ -47,19 +50,23 @@ public class LineItem {
         this.product = product;
     }
 
-    public static void main(String[] args) {
-        
-        LineItem line = new LineItem("B205", 2);
-        Product product = line.getProduct();
-        int amt = line.getQty();
-        //line.getProductPrice();
-        //line.getSubTotal();
-        //line.getProductDiscountAmt();
-        System.out.println(product);
-        System.out.println(amt);
-        //System.out.println(discount);
-        //System.out.println(price);
-        //System.out.println(total);
+    public static void main(String[] args) { 
+       LineItem line = new LineItem("B205", 6);
+       
+       String s = "Product ID: ";
+       s+= line.product.getProductId();
+       s+= " Product Description: ";
+       s+= line.product.getProductName();
+       // s = s + line.getQty()
+        s += line.getQty();
+        s += " Cost: $";
+        s += line.product.getUnitCost();
+        s+= " Total: $";
+        s+= line.getSubTotal();
+        s+= " Discount saved: $";
+        s+=line.getProductDiscountAmt();
+        System.out.println(s);
+       
         
        
         

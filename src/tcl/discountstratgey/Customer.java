@@ -6,19 +6,20 @@ package tcl.discountstratgey;
  * @author tim78317
  */
 public class Customer {
-    private String customerid;
+    private String customerId;
     
     
     
-    public Customer(String cusid, String name){
+    public Customer(String custId, String name){
+        
     }
 
     public String getCustomerid() {
-        return customerid;
+        return customerId;
     }
 
     public void setCustomerid(String customerid) {
-        this.customerid = customerid;
+        this.customerId = customerid;
     }
     
     

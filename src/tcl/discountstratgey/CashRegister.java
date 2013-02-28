@@ -9,4 +9,20 @@ public class CashRegister {
     private Receipt recepit; 
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public static void main(String[] args) {
+        
+    }
 }

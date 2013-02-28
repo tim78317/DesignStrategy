@@ -13,7 +13,7 @@ public class Product {
     
     
     
-    public Product(String name, String id, double cost, DiscountStrategy discount){
+    public Product(String id, String name, double cost, DiscountStrategy discount){
         productName= name; 
         productId = id;
         unitCost = cost;
